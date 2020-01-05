@@ -26,5 +26,10 @@ jobs:
         args: '"
         source .travis/env.sh;
         source /opt/setup-android-sdk.sh;
-        ./gradlew assembleDebug
+        ./gradlew assembleRelease
         "'
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v1
+      with:
+        name: apk
+        path: app/build/outputs
