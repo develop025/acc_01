@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
     - name: Make gradlew executable
     - run: chmod +x ./gradlew
       
-    - uses: actions/checkout@v1
     - name: checkout submodule
       run: git submodule sync --recursive && git submodule update --init --recursive
       
