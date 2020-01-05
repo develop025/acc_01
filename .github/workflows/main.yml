@@ -10,8 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Make gradlew executable
-    - run: chmod +x ./gradlew
-      
+      run: chmod +x ./gradlew
     - name: checkout submodule
       run: git submodule sync --recursive && git submodule update --init --recursive
       
